@@ -1,1 +1,1 @@
-# PAL
+# PAL (Persian Anilist *fetch*)
