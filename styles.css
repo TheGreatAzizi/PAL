@@ -10,11 +10,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
 }
+
 main {
     flex: 1;
 }
+
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -240,6 +241,7 @@ body.dark-mode .anime-extra div {
     background: #333;
     color: #ddd;
 }
+
 footer {
     margin-top: auto;
     background-color: #0073e6;
@@ -249,29 +251,35 @@ footer {
     position: relative;
     overflow: hidden;
 }
+
 footer .content {
     position: relative;
     z-index: 2;
 }
+
 footer .content h1 {
     font-size: 2rem;
     margin: 0;
     animation: glow 2s infinite alternate;
 }
+
 footer .content p {
     font-size: 1.2rem;
     margin: 10px 0 20px;
 }
+
 footer .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
+
 footer .social-icons a {
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
 }
+
 footer .sakura {
     position: absolute;
     width: 100%;
@@ -282,6 +290,7 @@ footer .sakura {
     opacity: 0.2;
     animation: fall 10s linear infinite;
 }
+
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #ff66cc, 0 0 30px #ff66cc;
@@ -290,8 +299,58 @@ footer .sakura {
         text-shadow: 0 0 20px #fff, 0 0 30px #ff66cc, 0 0 40px #ff66cc;
     }
 }
+
 @keyframes fall {
     to {
         background-position: 0 100%;
     }
 }
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    #searchButton,
+    #themeToggle {
+        width: 100%;
+    }
+
+    .anime-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anime-cover {
+        margin-bottom: 10px;
+    }
+
+    .anime-title-section {
+        text-align: center;
+        padding: 0;
+    }
+
+    .anime-trailer iframe {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #searchButton,
+    #themeToggle {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .anime-title {
+        font-size: 18px;
